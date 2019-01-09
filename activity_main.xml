@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pretty_sushi"
+                android:id="@+id/pretty_sushi"/>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sushikee_logo"
+                android:layout_below="@id/pretty_sushi"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/black"
+                android:id="@+id/sushikee_logo"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inner_linearLayout"
+                android:layout_below="@id/sushikee_logo"
+                android:padding="4dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Website"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Directions"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Call"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/info_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Business Information"
+                android:textSize="32sp"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp"
+                android:layout_below="@id/inner_linearLayout"/>
+
+            <TextView
+                android:id="@+id/business_type"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/info_tittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Business Type:"
+                android:textSize="22sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="0dp" />
+
+            <TextView
+                android:id="@+id/business"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/business_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sushi Restaurant"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/customer_review"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Reviews:"
+                android:textSize="22sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="0dp" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="4.6"
+                android:stepSize="0.5"
+                android:layout_below="@id/customer_review"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.6 (217 reviews)"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/customer_review"
+                android:layout_toRightOf="@id/rating_bar"
+                android:layout_marginLeft="12dp" />
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number:"
+                android:textSize="22sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="0dp" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(480)654-1306"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/store_address"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:"
+                android:textSize="22sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="0dp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/store_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6825 E Main St, Mesa, AZ 85206"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:id="@+id/store_menu"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu:"
+                android:textSize="22sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="0dp" />
+
+            <TextView
+                android:id="@+id/menu"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/store_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="places.singleplatform.com"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:paddingTop="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="10dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
